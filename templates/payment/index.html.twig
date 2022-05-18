@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Zay Shop eCommerce HTML CSS Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/img/senimmo.ico') }}">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/payment.css') }}">
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.min.css') }}">
+    <!--
+    
+TemplateMo 559 Zay Shop
+
+https://templatemo.com/tm-559-zay-shop
+
+-->
+</head>
+
+<body>
+
+    <div class="container d-lg-flex">
+        <div class="box-1 bg-light user">
+            <div class="d-flex align-items-center mb-3">
+                <a href="{{ path('app_home') }}">Retour au site</a>
+            </div>
+            <div class="box-inner-1 pb-3 mb-3 ">
+                <div class="d-flex justify-content-between mb-3 userdetails">
+                    <p class="fw-bold">Sen Villa</p>
+                </div>
+                <div id="my" class="carousel slide carousel-fade img-details" data-bs-ride="carousel" data-bs-interval="2000">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#my" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#my" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#my" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{{ asset('assets/img/1.jpg') }}" class="d-block w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-2">
+            <div class="box-inner-2">
+                <div>
+                    <p class="fw-bold">Détails</p>
+                    <p class="dis mb-3">Complétez votre achat en fournissant vos informations de paiement</p>
+                </div>
+                <form action="">
+                    <div class="mb-3">
+                        <p class="dis fw-bold mb-2">Adresse email</p>
+                        <input class="form-control" type="email" value="luke@skywalker.com">
+                    </div>
+                    <div>
+                        <p class="dis fw-bold mb-2">Informations de la carte</p>
+                        <div class="d-flex align-items-center justify-content-between card-atm border rounded">
+                            <div class="fab fa-cc-visa ps-3"></div>
+                            <input type="text" class="form-control" placeholder="Informations de la carte">
+                            <div class="d-flex w-50">
+                                <input type="text" class="form-control px-0" placeholder="MM/YY">
+                                <input type="password" maxlength=3 class="form-control px-0" placeholder="CVV">
+                            </div>
+                        </div>
+                        <div class="my-3 cardname">
+                            <p class="dis fw-bold mb-2">Nom sur la carte</p>
+                            <input class="form-control" type="text">
+                        </div>
+                        <div class="address">
+                            <p class="dis fw-bold mb-3">Adresse de facturation</p>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected hidden>Sénégal</option>
+                                <option value="1">Dakar</option>
+                                <option value="2">Saint-Louis</option>
+                                <option value="3">Diamniado</option>
+                            </select>
+                            <div class="d-flex">
+                                <input class="form-control zip" type="text" placeholder="Code Postal">
+                                <input class="form-control state" type="text" placeholder="Etat">
+                            </div>
+                            <div class=" my-3">
+                                <p class="dis fw-bold mb-2">Montant de la transaction</p>
+                                <div class="inputWithcheck">
+                                    <input class="form-control" type="text" value="350 000 FCFA">
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column dis">
+                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                    <p>Sous-total</p>
+                                    <p>350 000 FCFA</p>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                    <p>TVA<span>(18%)</span></p>
+                                    <p>63 000 FCFA</p>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                    <p class="fw-bold">Total</p>
+                                    <p class="fw-bold">413 000 FCFA</p>
+                                </div>
+                                <div class="btn btn-warning mt-2">
+                                    Payer <b>413 000 FCFA</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

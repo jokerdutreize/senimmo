@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProjectController!{% endblock %}
+
+
+{% block body %}
+<!-- Modal -->
+<div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="w-100 pt-1 mb-5 text-right">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form action="" method="get" class="modal-content modal-body border-0 p-0">
+            <div class="input-group mb-2">
+                <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                <button type="submit" class="input-group-text bg-success text-light">
+                    <i class="fa fa-fw fa-search text-white"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<!-- Open Content -->
+<section class="bg-light">
+    <div class="container pb-5">
+        <div class="row">
+            <div class="col-lg-5 mt-5">
+                <div class="card mb-3">
+                    <img class="card-img img-fluid" src="{{ asset('assets/img/1.jpg') }}" alt="Card image cap" id="product-detail">
+                </div>
+            </div>
+            <!-- col end -->
+            <div class="col-lg-7 mt-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="h2">Sen Villa</h1>
+                        <p class="h3 py-2">120 000 000 FCFA</p>
+                        <p class="py-2">
+                            <span class="list-inline-item text-dark">24 participants (<b>90 675 957 FCFA</b>)</span>
+                        </p>
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <h6>Localisation du projet:</h6>
+                            </li>
+                            <li class="list-inline-item">
+                                <p class="text-muted"><strong>Dakar, SN</strong></p>
+                            </li>
+                        </ul>
+
+                        <h6>Description:</h6>
+                        <p>Construction d'une maison de style clissonnais. Cette bâtisse mélange le style local et des éléments comptemporain. Elle est tournée autour de la piscine.</p>
+
+                        <ul class="list-unstyled pb-3">
+                            <li><b>Indice de Profitabilité:</b> 1,67</li><br>
+                            <li><b>Délai de Récupération du Capital Investi:</b> 4 ans</li><br>
+                            <li><b>Impact Social:</b><br>La création d’emploi est primordiale car l’insertion des jeunes dans l’entrepreneuriat est un indicateur de développement pour nous, cela réduit le taux de chômage dans le pays. La création de SENIMMO a généré 20 emplois directs et plusieurs emplois indirects.</li><br>
+                            <li><b>Porteur de projet:</b><br>Djibril SEYNI<br>+221 78 130 57 40<br>djibril.seyni@ism.edu.sn</li><br>
+                        </ul>
+
+                        <form action="" method="GET">
+                            <input type="hidden" name="product-title" value="Activewear">
+
+                            <div class="row pb-3">
+                                <div class="col d-grid">
+                                    <a class="btn btn-warning btn-lg" href="{{ path('app_payment') }}">Investir</a>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Close Content -->
+
+
+
+{% endblock %}

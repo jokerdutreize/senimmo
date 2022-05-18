@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon compte - SENIMMO{% endblock %}
+
+{% block body %}
+<div class="container p-5">
+    <h1 class="h2">Tableau de bord (<span>{{ app.user.firstname }}</span>)</h1>
+    <hr>
+    {% if app.user.roles == "ROLE_ADMIN" %}
+    <a href="{{ path('admin') }}">
+        Admin Panel
+    </a>
+    {% endif %}
+    <h1 class="h3">Mon compte</h1>
+    <div class="row">
+        <div class="col-md-3">
+            <a href="{{ path('app_account_password') }}">
+                <div class="card-counter primary">
+                    <i class="fa fa-key"></i>
+                    <span class="count-numbers">Mot de passe</span>
+                    <span class="count-name">Modifier mot de passe</span>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <div class="card-counter danger">
+                <i class="fa fa-address-book-o"></i>
+                <span class="count-numbers">Adresses</span>
+                <span class="count-name">Gérer les adresses</span>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h1 class="h3">Projets</h1>
+    <div class="row">
+        <div class="col-md-3">
+            <a href="{{ path('app_add_project') }}">
+                <div class="card-counter success">
+                    <i class="fa fa-key"></i>
+                    <span class="count-numbers">Ajouter projet</span>
+                    <span class="count-name">Modifier mot de passe</span>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <div class="card-counter info">
+                <i class="fa fa-key"></i>
+                <span class="count-numbers">Mes projets</span>
+                <span class="count-name">Modifier mot de passe</span>
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>
+{% endblock %}

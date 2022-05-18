@@ -1,0 +1,245 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+<!-- Modal -->
+<div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="w-100 pt-1 mb-5 text-right">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form action="" method="get" class="modal-content modal-body border-0 p-0">
+            <div class="input-group mb-2">
+                <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                <button type="submit" class="input-group-text bg-success text-light">
+                    <i class="fa fa-fw fa-search text-white"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<!-- Start Banner Hero -->
+<div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="container">
+                <div class="row p-5">
+                    <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                        <img class="img-fluid" src="{{ asset('assets/img/building.png') }}" alt="">
+                    </div>
+                    <div class="col-lg-6 mb-0 d-flex align-items-center">
+                        <div class="text-align-left align-self-center">
+                            <h1 class="h1 text-warning"><b>SENIMMO</b></h1>
+                            <h3 class="h2 text-white">Ensemble pour une meilleure vision de l’immobilier</h3>
+                            <p class="text-white">
+                                SENIMMO est une entreprise évoluant dans le domaine du crowdfunding, précisément le
+                                crowdfunding immobilier. A travers sa plateforme, elle permettra à toute personne, même
+                                vivant à l’extérieur du Sénégal de profiter du financement d’un projet.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="container">
+                <div class="row p-5">
+                    <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                        <img class="img-fluid" src="{{ asset('assets/img/funding.png') }}" alt="" width="338px" height="338px">
+                    </div>
+                    <div class="col-lg-6 mb-0 d-flex align-items-center">
+                        <div class="text-align-left">
+                            <h1 class="h1 text-warning"><b>SENIMMO</b></h1>
+                            <h3 class="h2 text-white">Faîtes financer vos projets immobiliers</h3>
+                            <p class="text-white">
+                                Notre objectif est de faciliter l'acquisition de biens
+                                immobiliers en permettant le financement de projets sous forme de cotisation, ainsi que de
+                                faciliter l'interaction entre promoteur et investisseur.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev text-decoration-none w-auto ps-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="prev">
+        <i class="fas fa-chevron-left"></i>
+    </a>
+    <a class="carousel-control-next text-decoration-none w-auto pe-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="next">
+        <i class="fas fa-chevron-right"></i>
+    </a>
+</div>
+<!-- End Banner Hero -->
+
+
+<!-- Start Categories of The Month -->
+<section class="container py-5">
+    <div class="row text-center pt-3">
+        <div class="col-lg-6 m-auto">
+            <h1 class="h1">Comment ça marche ?</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-6 p-5 mt-3">
+            <p class="text">
+                La société de service SENIMMO est une société à responsabilité limitée qui a pour objectif de
+                promouvoir des projets immobiliers en mettant en relation un certain nombre d’acteurs. Elle est
+                l’initiative d’un groupe d’étudiants de l’école d’ingénieurs du Groupe ISM, tous qualifiés dans
+                leurs domaines respectifs. <br><br>
+                Notre modèle comporte 3 acteurs :
+            <ul>
+                <li>Le promoteur</li>
+                <li>L'investisseur</li>
+                <li>Nous</li>
+            </ul>
+            </p>
+        </div>
+        <div class="col-12 col-md-6 p-5 mt-3">
+            <img src="{{ asset('assets/img/crowd.jpg') }}" alt="" width="512px" height="308px">
+        </div>
+    </div>
+    <div class="container">
+        <div class="timeline">
+            <div class="timeline-row">
+                <div class="timeline-time text-warning">
+                    Expression du besoin
+                </div>
+                <div class="timeline-content">
+                    <i class="icon-attachment"></i>
+                    <h4 class="text-warning">Le promoteur</h4>
+                    <p class="text-white">
+                        Le promoteur veut réaliser un projet immobilier, c’est-à-dire construire un ou plusieurs biens
+                        afin de les revendre pour réaliser une plus-value. Pour cela, il a besoin de fonds. Il va donc faire
+                        appel au public pour emprunter ces fonds, réaliser son projet, dégager une marge, et rembourser
+                        les investisseurs avec la marge réalisée.
+                    </p>
+                    <div class="thumbs">
+                        <img class="img-fluid rounded" src="{{ asset('assets/img/homme.png') }}" alt="Maxwell Admin">
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-row">
+                <div class="timeline-time text-warning">
+                    Analyse du projet
+                </div>
+                <div class="timeline-content">
+                    <i class="icon-attachment"></i>
+                    <h4 class="text-warning">La plateforme (nous)</h4>
+                    <p class="text-white text-center">
+                        La plateforme, elle, analyse le projet immobilier et vous permet d’investir facilement en ligne.
+                        Le paiement et la signature des documents se font entièrement en ligne.
+                        Afin de proposer des projets de qualités aux investisseurs et ainsi garantir un alignement
+                        d’intérêt, SENIMMO s’engage à contrôler la pertinence et la fiabilité de 100% des opportunités
+                        proposées sur la plateforme.
+                    </p>
+                    <div class="thumbs">
+                        <img class="img-fluid rounded" src="{{ asset('assets/img/platform.png') }}" alt="Maxwell Admin">
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-row">
+                <div class="timeline-time text-warning">
+                    Investir
+                </div>
+                <div class="timeline-content">
+                    <i class="icon-attachment"></i>
+                    <h4 class="text-warning">Les investisseurs</h4>
+                    <p class="text-white text-center">
+                        Ils participent au financement du projet, qui peut
+                        ensuite voir le jour, en contrepartie des éventuels bénéfices.
+                        Ils peuvent par la suite suivre l’évolution de
+                        celui-ci via le porteur de projet qui aura renseigné toutes ses coordonnées.
+                    </p>
+                    <div class="thumbs">
+                        <img class="img-fluid rounded" src="{{ asset('assets/img/bank.png') }}" alt="Maxwell Admin">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- End Categories of The Month -->
+
+
+<!-- Start Featured Product -->
+<section class="bg-light">
+    <div class="container py-5">
+        <div class="row text-center py-3">
+            <div class="col-lg-6 m-auto">
+                <h1 class="h1 mb-5">Projets à la une</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card h-100">
+                    <a href="{{ path('app_show_project') }}">
+                        <img src="{{ asset('assets/img/1.jpg') }}" class="card-img-top" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <ul class="list-unstyled d-flex justify-content-between">
+                            <li class="text-muted text-right">Dakar, SN</li>
+                            <li class="text-muted text-right">120 000 000 FCFA</li>
+                        </ul>
+                        <a href="shop-single.html" class="h2 text-decoration-none text-dark">Sen Villa</a>
+                        <p class="card-text">
+                            Construction d'une maison de style clissonnais. Cette bâtisse mélange le style local et des éléments comptemporain. Elle est tournée autour de la piscine.
+                        </p>
+                        <p class="text-muted">24 participants</p>
+                        <p><span><b>90 675 957 FCFA</b></span> collectés</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card h-100">
+                    <a href="shop-single.html">
+                        <img src="{{ asset('assets/img/2.jpg') }}" class="card-img-top" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <ul class="list-unstyled d-flex justify-content-between">
+                            <li class="text-muted text-right">Dakar, SN</li>
+                            <li class="text-muted text-right">350 000 000 FCFA</li>
+                        </ul>
+                        <a href="shop-single.html" class="h2 text-decoration-none text-dark">Au Duplex</a>
+                        <p class="card-text">
+                            Vous voulez habiter dans un duplex spacieux avec une belle vue, nous vous proposons celui-ci que nous donnons en location sis à Ouest foire Dakar au Sénégal.
+                        </p>
+                        <p class="text-muted">112 participants</p>
+                        <p><span><b>200 750 345 FCFA</b></span> collectés</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card h-100">
+                    <a href="shop-single.html">
+                        <img src="{{ asset('assets/img/3.jpg') }}" class="card-img-top" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <ul class="list-unstyled d-flex justify-content-between">
+                            <li class="text-muted text-right">Diamniado, SN</li>
+                            <li class="text-muted text-right">150 000 000 FCFA</li>
+                        </ul>
+                        <a href="shop-single.html" class="h2 text-decoration-none text-dark">Résidence Gandhi</a>
+                        <p class="card-text">
+                            Vous voulez habiter dans un duplex spacieux avec une belle vue, nous vous proposons celui-ci que nous donnons en location sis à Ouest foire Dakar au Sénégal.
+                        </p>
+                        <p class="text-muted">28 participants</p>
+                        <p><span><b>145 863 000 FCFA</b></span> collectés</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Featured Product -->
+{% endblock %}
